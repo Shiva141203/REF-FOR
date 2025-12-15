@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - REF-FOR!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">REF-FOR</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <!-- Modified HOME link to point to #home-section -->
+                    <li><a href="#home-section">HOME</a></li>
+                    <li><a href="#">JOB</a></li>
+                    <li><a href="#">INTERNSHIP</a></li>
+                    <li><a href="#">CERTIFICATION</a></li>
+                    <li><a href="#">IMPORTANT QUESTIONS</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Added id="home-section" to the content div -->
+        <div class="content" id="home-section">
+            <h1>Unlock Your <br><span>Career Potential</span></h1>
+            <p class="par">Great opportunities come to those who recognize talent and invest in it.</p>
+            <div class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="email" placeholder="Enter Email Here">
+                <input type="password" name="password" placeholder="Enter Password Here">
+                <button class="btnn" id="login-btn">Login</button>
+                <p class="link">Don't have an account? <a href="signup.html">Sign up here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link JavaScript File -->
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+    
+    <!-- Add this new script for smooth scrolling -->
+    <script>
+        document.querySelector('a[href="#home-section"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#home-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+</html>
